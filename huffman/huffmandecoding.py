@@ -15,4 +15,14 @@ class HuffmanDecoding:
         :param tree: árbol de Huffman
         :return: texto decodificado
         """
-        raise NotImplementedError("Aún no implementado")
+        decoded_text = ""
+        node = tree
+        for bit in text:
+            if bit == "0":
+                node = node.left
+            elif bit == "1":
+                node = node.right
+            if node.key[1] is not None:
+                decoded_text += node.key[1]
+                node = tree
+        return decoded_text
