@@ -1,7 +1,6 @@
 import pytest
 from huffman.huffmancoding import HuffmanCoding
 from huffman.huffmandecoding import HuffmanDecoding
-from resources import ejemplo1
 
 @staticmethod
 def verify_tree(tree):
@@ -45,5 +44,3 @@ def test_files(filename):
 
     assert verify_tree(tree)
     assert text == decoded
-
-test_files(ejemplo1)
