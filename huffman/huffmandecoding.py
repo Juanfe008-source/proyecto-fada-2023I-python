@@ -2,7 +2,10 @@ class HuffmanDecoding:
     """
     Clase HuffmanDecoding
     Esta clase se encarga de decodificar un texto en base a un árbol de Huffman
-    Autor: <Estudiantes>
+    Autor: <Juan Felipe Alarcon
+            Sergio Estrada castro
+            Jean Carlo Enriquez
+            Luis Miguel parra>
     Version: <1>
     """
     def __init__(self):

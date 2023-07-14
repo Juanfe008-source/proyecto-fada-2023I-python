@@ -1,7 +1,7 @@
 import pytest
 from huffman.huffmancoding import HuffmanCoding
 from huffman.huffmandecoding import HuffmanDecoding
-
+from resources import ejemplo1
 
 @staticmethod
 def verify_tree(tree):
@@ -32,10 +32,10 @@ def verify_tree(tree):
         return True
 
 @pytest.mark.parametrize("filename", ["ejemplo1.in", "ejemplo2.in", "ejemplo3.in"])
-def test_files(self, filename):
+def test_files(filename):
     with open(f'resources/{filename}', 'r') as file:
         text = file.read()
-
+    print()
     coding = HuffmanCoding()
     encoded = coding.encode(text)
     tree = coding.get_tree()
@@ -43,5 +43,7 @@ def test_files(self, filename):
     decoding = HuffmanDecoding()
     decoded = decoding.decode(encoded, tree)
 
-    assert self.verify_tree(tree)
+    assert verify_tree(tree)
     assert text == decoded
+
+test_files(ejemplo1)

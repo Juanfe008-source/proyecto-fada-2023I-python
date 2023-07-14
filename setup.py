@@ -7,5 +7,5 @@ setup(name='Huffman',
       description='Python Distribution Utilities',
       author='Greg Ward',
       author_email='carlos.andres.delgado@correounivalle.edu.co',
-      packages=['huffman'],
+      packages=['huffman', 'resources'],
      )
